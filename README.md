@@ -9,9 +9,6 @@ NOTE: currently, the released python implementation is not the complete version 
 1. It only support clique mining now. However, the method can be applied to any dense pattern as defined in the paper. For further details, please refer to our paper ( e.g. Section VI. )
 2. The optional *locality-aware partition* is not applied
 
-## Table of content
-[TOC]
-
 ## Problem setup
 
 Given a query pattern Q and a target graph G, estimate how many Qs are there in G. For LessMine, the query pattern Q should be a dense pattern (the pattern that has at least one node connected to all other nodes).
