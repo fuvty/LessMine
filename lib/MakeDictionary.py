@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Motified on Sat Feb 22 2020
-
-@author: WanZiqian
-@edit: FuTianyu
+@author: FuTianyu
+@coauthor: WanZiqian
 """
-# this function outputs 1 dictionary of a graph, which is used to make the basic functions(FC,CC) run faster
-#@profile
 import copy
 
 def MakeDictionary(edge_list): 
-    
+    '''
+    outputs the adjacency list of the input edge_list. Treat the edge_list as a directed graph
+    '''
     dict_node = dict() #document the neighbor nodes of the first node in the edge_list
     
     for i in range(len(edge_list)):
@@ -24,13 +22,13 @@ def MakeDictionary(edge_list):
     return dict_node
 
 
-def MakeFullDictionary(old_edge_list): 
+def MakeFullDictionary(edge_list_input): 
     # Alert: Will Double Edge-List
     # edge_list has to be undirected one-way edge ;
     # e.g if [1,2] in edge_list,then [2,1] can't be in it
     dict_node = dict() #document the neighbor nodes of the first node in the edge_list
-    reverse_edge_list = [ [e[1],e[0]] for e in old_edge_list ]
-    edge_list = copy.deepcopy(old_edge_list)
+    reverse_edge_list = [ [e[1],e[0]] for e in edge_list_input ]
+    edge_list = copy.deepcopy(edge_list_input)
     edge_list.extend(reverse_edge_list)
     
     for i in range(len(edge_list)):

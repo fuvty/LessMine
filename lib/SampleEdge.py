@@ -10,16 +10,18 @@ import random
 # this function randomly samples an edge from the graph
 # modified invP = 1/p
 def SampleEdge(edge_list,num_e):
-    
+    '''
+    randomly samples an edge from the graph
+    '''
     # the probability of sample an edge
-    invP = num_e 
+    inv_p = float(num_e) 
     
     # randomly samples an edge
     l = random.randint(0,num_e-1)
-    e = edge_list[l]
+    e = tuple(edge_list[l])
 
     # output the edge, probability and edge id
-    return e,invP,l
+    return e,inv_p,l
 
 def SampleEdges(edge_list,num_e,N):
     # the probability of sample an edge

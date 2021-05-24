@@ -17,7 +17,7 @@ from lib.Dictionary import Dictionary
 
 from lib.FixClique import FixClique,PreComb
 from lib.CloseClique import CloseClique
-from lib.MakeDictionary import MakeDictionary,MakeFullDictionary
+from lib.MakeDictionary import MakeDiDictionary,MakeFullDictionary
 
 import random
 
@@ -143,7 +143,7 @@ def DictNeighbour(Edge_list):
             t = Edge_list[j][0]
             Edge_list[j][0] = Edge_list[j][1]
             Edge_list[j][1] = t
-    dict_node = MakeDictionary(Edge_list)
+    dict_node = MakeDiDictionary(Edge_list)
     return dict_node
 
 def DictFullNeighbour(Edge_list):

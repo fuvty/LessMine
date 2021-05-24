@@ -7,7 +7,7 @@ Created on Sat Feb 22 2020
 import random
 import math
 
-def FixClique(e1,dict_node,num_clique,comb_table):
+def ConcurrentSample(e1,dict_node,num_clique,comb_table):
     fix_node = []
     # fix first two nodes ; note that the first one is the smallest
     if e1[0] <= e1[1]:
@@ -46,9 +46,9 @@ def FixClique(e1,dict_node,num_clique,comb_table):
     return[invP,fix_node]
 
 
-def PreComb(num_clique,max_comb):
+def PreComb(num_query_n,max_comb):
     comb_table = [max_comb]
-    m = num_clique-2
+    m = num_query_n-2
     for n in range(1,m):
         comb_table.append(0)
     for n in range(m,max_comb):
