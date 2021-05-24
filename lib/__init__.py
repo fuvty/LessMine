@@ -4,7 +4,8 @@ from .ConditionalClose import ConditionalClose
 from .Dictionary import Dictionary
 from .ConcurrentSample import ConcurrentSample,PreComb
 from .UniformClose import UniformClose
-from .MakeDictionary import MakeDiDictionary
+from .MakeDictionary import MakeDictionary
 from .NumEstimator import NumEstimator
 from .ReadEdgeFile import ReadEdgeFile
 from .MakeEmbCmpDict import MakeEmbCmpDict
+from .Relabel import *
