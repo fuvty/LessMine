@@ -84,10 +84,13 @@ def main():
     num_estimator = 10000
 
     query = nx.Graph()
-    query.add_edges_from([(1,0),(0,2),(1,2)]) # triangle
+    # query.add_edges_from([(0,1),(0,2),(1,2)]) # triangle
+    # exact = 1612010 # triangle
+
+    query.add_edges_from([(0,1),(0,2),(1,2),(0,3),(1,3),(2,3)]) # 4-clique
+    exact = 30004668 # 4-clique
+
     query = RelabelNX(query)
-    exact = 1612010
-    
     avg_count = LessMine_main(target_filename, query, num_estimator)
     num_pattern = avg_count[-1]
     print(num_pattern)
