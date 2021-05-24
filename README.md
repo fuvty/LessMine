@@ -37,7 +37,7 @@ The file `LessMine.py` provides the main user interface called `LessMine_main()`
 
 ```
 //  Created by Tianyu Fu on 2021/5/24.
-//  Contributed by members of NICS THU
+//  Contributed by members of NICS Lab of Tsinghua University
 
 //  Contact: futy18@mails.tsinghua.edu.cn
 ```
